@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДЗ 30. Гамбургер</title>
+    <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="d-flex justify-content-between p-3 bg-dark border-bottom border-primary mb-5">
+        <h2 class="mb-0"> Домашнє завдання 30</h2>
+        <div>
+            <a id="github-link" href="" target="_blank" class="btn btn-outline-light btn-sm">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <select id="task-select" class="custom-select custom-select-sm w-auto ml-3">
+                <option value="hm30" selected>hm30</option>
+            </select>
+        </div>
+    </header>
+    <div id="tab-content">
+        <div class="container mt-5">
+            <h2 class="mb-4">Конфігуратор Гамбургера</h2>
+
+            <form id="hamburgerForm">
+                <!-- Size selection -->
+                <div class="form-group">
+                    <label for="size">Оберіть розмір:</label>
+                    <select class="form-control" id="size">
+                        <option value="small">Small (50 тугриків, 20 калорій)</option>
+                        <option value="large">Large (100 тугриків, 40 калорій)</option>
+                    </select>
+                </div>
+
+                <!-- Stuffing selection -->
+                <div class="form-group">
+                    <label for="stuffing">Оберіть начинку:</label>
+                    <select class="form-control" id="stuffing">
+                        <option value="cheese">Cheese (+ 10 тугриків, + 20 калорій)</option>
+                        <option value="salad">Salad (+ 20 тугриків, + 5 калорій)</option>
+                        <option value="potato">Potato (+ 15 тугриків, + 10 калорій)</option>
+                    </select>
+                </div>
+
+                <!-- Toppings checkboxes -->
+                <div class="form-group">
+                    <label>Додати добавки:</label>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="mayo">
+                        <label class="form-check-label" for="mayo">Mayo (+ 20 тугриків, + 5 калорій)</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="sauce">
+                        <label class="form-check-label" for="sauce">Sauce (+ 15 тугриків, 0 калорій)</label>
+                    </div>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary">Розрахувати</button>
+            </form>
+
+            <!-- Result display -->
+            <div class="mt-4" id="results">
+                <p><strong>Calories:</strong> <span id="calories"></span></p>
+                <p><strong>Price:</strong> <span id="price"></span></p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="bg-dark text-light text-center text-lg-start mt-5">
+        <div class="container p-4">
+            <h5 class="text">Костянтин Буряк</h5>
+            <p>Розробник Salesforce</p>
+            <p>+380934739023 | buriak.kostiantyn@gmail.com</p>
+            <a href="https://t.me/kostia_b" target="_blank"><i class="fab fa-telegram fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/kburiak/" target="_blank"><i
+                    class="fab fa-linkedin fa-2x ml-3"></i></a>
+        </div>
+    </footer>
+
+    <!-- Додайте Bootstrap JS та залежності -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Додайте ваш файл JS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
